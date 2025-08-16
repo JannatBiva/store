@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ Store Project
 
-## Getting Started
+A demo e-commerce web app built with **Next.js 15**, **React 19**, and **Tailwind CSS 4**.  
+This project is designed to showcase frontend structure, reusable UI components, and a clean developer workflow **without relying on external design packages**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- ⚡ **Next.js 15** with Turbopack for fast development
+- 🎨 **Tailwind CSS 4** for custom styling
+- 🧩 Reusable UI components (Navbar, Sidebar, Product Cards, etc.)
+- 🛒 Demo shop pages:
+  - Home page with banners and product highlights
+  - Category-based shop
+  - Product detail pages
+  - Locations page with selector
+- 📱 **Responsive layout** optimized for desktop and mobile
+- 🔧 ESLint + TypeScript support for type safety and clean code
+
+---
+
+📂 Project Structure
+
+```markdown 
+store/
+├── public/                     # Static assets (images, logos, products)
+├── src/
+│   ├── app/                     # Next.js App Router pages
+│   │   ├── shop/                # Shop listing page
+│   │   ├── product/[id]/        # Product detail page
+│   │   ├── locations/           # Locations page
+│   │   └── layout.tsx           # Root layout
+│   ├── components/              # Reusable UI + shop components
+│   ├── data/                    # Demo product data
+│   ├── lib/                     # API helpers and endpoints
+│   └── types/                   # TypeScript models
+├── tailwind.config.ts           # Tailwind configuration
+├── postcss.config.mjs           # PostCSS configuration
+├── tsconfig.json                # TypeScript configuration
+└── package.json                 # Project dependencies
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Clone the repository:
 
-## Learn More
+```bash
+git clone https://github.com/JannatBiva/store.git
+cd store
+```
+---
+Install dependencies:
+```bash
+npm install
+```
+---
 
-To learn more about Next.js, take a look at the following resources:
+Run in development mode:
+```bash
+npm run dev
+```
+---
+Build for production:
+```bash
+npm run build
+npm start
+```
+---
+📦 Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js 15
+- React 19
+- Tailwind CSS 4
+- Lucide React (for icons)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+👉 Note: No design system (e.g., Material UI, Chakra UI, DaisyUI) is used — everything is styled with Tailwind.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🧑‍💻 Development Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- All components are written with TypeScript for type safety.
+- ESLint is included for linting.
+- Uses App Router (src/app) instead of Pages Router.
+
+📜 License
+
+MIT — free to use and modify.
+
+
+---
+
